@@ -17,6 +17,8 @@ export default [
     rules: {
       ...tseslint.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      // tsc 已检查未定义标识符，no-undef 无法识别 DOM 类型与浏览器全局量
+      'no-undef': 'off',
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/no-non-null-assertion': 'error',
       'no-console': ['warn', { allow: ['error'] }],
