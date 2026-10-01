@@ -22,5 +22,5 @@ export default [
       'no-console': ['warn', { allow: ['error'] }],
     },
   },
-  { files: ['**/*.test.{ts,tsx}'], rules: { '@typescript-eslint/no-unused-vars': 'off' } },
+  { files: ['**/*.test.{ts,tsx}'], languageOptions: { globals: { HTMLElement: 'readonly', HTMLAnchorElement: 'readonly' } }, rules: { '@typescript-eslint/no-unused-vars': 'off' } },
 ]
